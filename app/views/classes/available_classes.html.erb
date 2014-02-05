@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../Images/k.jpg">
+
+    <title>Available Classes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../CSS/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../CSS/starter-template.css" rel="stylesheet">
+    <link href="../CSS/navbar-fixed-top.css" rel="stylesheet">
+    <link href="../CSS/grid.css" rel="stylesheet">
+
+    <style type="text/css">
+      .row {
+        border-bottom: 1px solid gray;
+        padding-top: 50px;}
+      .starter-template{
+        padding-bottom: 50px
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" >Course Exchange</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/index">Available Classes</a></li>
+            <li><a href="#my_classes">My Classes</a></li>
+            <li><a href="#proposed_exchanges">Proposed Exchanges</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Log Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Available Classes</h1>
+        <p class="lead">Below is a list of classes available for Course Exchange.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="table_header">
+      <div class="col-md-2">Course</div>
+      <div class="col-md-1">Section</div>
+      <div class="col-md-2">Section Title</div>
+      <div class="col-md-1">Credits</div>
+      <div class="col-md-3">Times</div>
+      <div class="col-md-2">Instructor(s)</div>
+      <div class="col-md-1">Exchange</div>
+    </div>
+
+    <% @course_list.each do |course| %>
+    <div class="row">
+      <div class="col-md-2">
+        <a href="/show"><%= course %></a>
+      </div>
+      <div class="col-md-1">61</div>
+      <div class="col-md-2">Class Name</div>
+      <div class="col-md-1">1</div>
+      <div class="col-md-3">Thu 1:30 PM - 4:45 PM</div>
+      <div class="col-md-2">Last, First</div>
+      <div class="col-md-1">
+        <p><a class="btn btn-primary btn-lg" role="button">Propose &raquo;</a></p>
+      </div>
+    </div>
+    <% end%>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Available_classes_files/jquery-1.js"></script>
+    <script src="Available_classes_files/bootstrap.js"></script>
+
+
+</body></html>

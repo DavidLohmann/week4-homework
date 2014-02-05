@@ -1,0 +1,8 @@
+<h1>Current Conditions for <%= @city %></h1>
+
+
+<p>It is currently <%= @data["main"]["temp"]%> degrees with <%= @data["main"]["humidity"]%>% humidity in <%= @city %>.</p>
+
+
+<!-- <%=  %> is an enbedded ruby variable. this works instead of "puts" -->
+<!-- @ is pulling from your Ruby document -->
